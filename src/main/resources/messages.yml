@@ -1,0 +1,149 @@
+error:
+  message:
+    no-console: You can't do this in console.
+    unknown-arg: "%p &fUnknown args. %newline% &fUsage: &a%usage%"
+    unknown-id: "%p &fUnknown id. %newline% &fUsage: &a%usage%"
+    offline: "%p &fThe player &a%player% &fis offline."
+    cant-buy: "%e &fSrry, you cant buy this item. Your money is &a%money% &f."
+  arena:
+    list-empty: "%e &fThere is no arena."
+    koth:
+      list-empty: "%e &fThere is no koth."
+    regenchest:
+      list-empty: "%e &fThere is no regenchest."
+    rewards:
+      list-empty: "%e &fThe inventory is empty."
+    lobby-no-set: "%e &fThe arena &a%arena% &fdidn't have a lobby."
+    no-exists: "%e &fThe arena &a%arena% &fno exists."
+    already-created: "%e &fThe arena &a%arena% &fwas already created."
+    already-deleted: "%e &fThe arena &a%arena% &fwas already deleted or no exists."
+  command:
+    config-noexists: "%e &fThe file &a%file% &fdoesn't exists."
+  signs:
+    buy:
+      nline-2:
+        didnt-put: "%e &fYou didn't put the costs of the item."
+        negative: "%e &fThe amount is negative if you want to sell put [Sell] in the sign."
+      nline-3:
+        didnt-put: "%e &fYou didn't put the amount of items."
+        negative: "%e &fThe amount is negative if you want to sell put [Sell] in the sign."
+      nline-4:
+        didnt-put: "%e &fYou didn't put the ID."
+        no-exists: "%e &fThe ID no exists."
+    sell:
+      nline-2:
+        didnt-put: "%e &fYou didn't put the costs of the item."
+        negative: "%e &fThe amount is negative if you want to buy put [Buy] in the sign."
+      nline-3:
+        didnt-put: "%e &fYou didn't put the amount of items."
+        negative: "%e &fThe amount is negative if you want to sell put [Buy] in the sign."
+      nline-4:
+        didnt-put: "%e &fYou didn't put the ID."
+        no-exists: "%e &fThe ID no exists."
+    join:
+      nline-2: "%e &fYou didn't put the arena."
+
+command:
+  help:
+    - "%p &fPlugin help 1/1."
+    - "&8-> &f/fullpvp join &a[arena]"
+    - "&8-> &f/fullpvp quit"
+    - "&8-> &f/fullpvp create &a[arena]"
+    - "&8-> &f/fullpvp delete &a[arena]"
+    - "&8-> &f/fullpvp arena &a[arena]"
+    - "&8-> &f/fullpvp list"
+    - "&8-> &f/fullpvp reload"
+  list:
+    space: "&8->"
+    regenchest:
+      format: "%p &fList of regen chest in &a%arena% &8:"
+    koth:
+      format: "%p &fList of koths in &a%arena% &8:"
+    rewards:
+      format: "%p &fList of items of &a%mode% #%id% in %arena% &8:"
+  arena:
+    - "%p &fArena &a[%arena%] &8- &fHelp"
+    - "&8-> &f/fullpvp arena %arena% help"
+    - "&8-> &f/fullpvp arena %arena% setlobby"
+    - "&8-> &f/fullpvp arena %arena% koth"
+    - "&8-> &f/fullpvp arena %arena% regenchest"
+  regenchest:
+    - "%p &fKoth &a[%arena%] &8- &fHelp"
+    - "&8-> &f/fullpvp arena %arena% koth create"
+    - "&8-> &f/fullpvp arena %arena% koth delete [id]"
+    - "&8-> &f/fullpvp arena %arena% koth id [id]"
+  regenchestid:
+    - "%p &fKoth %id% of &a[%arena%] &8- &fHelp"
+    - "&8-> &f/fullpvp arena %arena% koth id %id% help"
+    - "&8-> &f/fullpvp arena %arena% koth id %id% setinv"
+  koth:
+    - "%p &fRegenchest &a[%arena%] &8- &fHelp"
+    - "&8-> &f/fullpvp arena %arena% regenchest create"
+    - "&8-> &f/fullpvp arena %arena% regenchest delete %id"
+    - "&8-> &f/fullpvp arena %arena% regenchest id %id%"
+  kothid:
+    - "%p &fRegenchest %id% of &a[%arena%] &8- &fHelp"
+    - "&8-> &f/fullpvp arena %arena% regenchest id %id% help"
+    - "&8-> &f/fullpvp arena %arena% regenchest id %id% setlocation"
+    - "&8-> &f/fullpvp arena %arena% regenchest id %id% rewards"
+  kothidrewards:
+    - "%p &fRewards of regenchest %id% of &a[%arena%] &8- &fHelp"
+    - "&8-> &f/fullpvp arena %arena% regenchest id %id% rewards help"
+    - "&8-> &f/fullpvp arena %arena% regenchest id %id% rewards add"
+    - "&8-> &f/fullpvp arena %arena% regenchest id %id% rewards remove [id]"
+    - "&8-> &f/fullpvp arena %arena% regenchest id %id% rewards setinv"
+  stats:
+    - "%p &fStats of &a%playername%"
+    - ""
+    - "&8- &fKills: &a%kills%"
+    - "&8- &fMax killstreak: &a%maxkillstreak%"
+    - "&8- &fDeaths: &a%deaths%"
+    - "&8- &fCoins: &a%coins%"
+    - ""
+  list-arena: "%p &fList of arenas &8[&a%size%&8]&f:"
+  space: "&8->"
+  reload: "%p &fPlugin reloaded."
+  file-reload: "%p &f%file% reloaded."
+
+server:
+  on-reload: "&fLooks like, the server reloaded.."
+  rankup: "%e &fThe player &a%player% &franked to &a%rank%&f."
+
+deaths:
+  assist: "%p &fYou assisted in the kill of &a%victim%&f."
+  coins:
+    gain: "%p &fYou gain &a%coins% &fcoins."
+    lost:  "%p &fYou lost &a%coins% &fcoins."
+  victim:
+    on-kill: "%p &fYou were killed by &a%killer%&f."
+    on-shoot: "%p &fYou were shooted by &a%killer%."
+    on-fall: "%p &fYou broke your legs."
+    on-lava: "%p &fYou died in lava or fire."
+    on-burn: "%p &fYou died in burning."
+    on-poison: "%p &fYou died in poison."
+    on-drown: "%p &fYou died on drowning."
+    other: "%p &fYou died."
+  killer:
+    on-kill: "%p &fYou killed &a%victim%&f."
+    on-shoot: "%p &fYou shooted &a%victim%&f."
+  global:
+    on-kill: "%p &fThe player &a%victim% &fwas killed by &a%killer%&f."
+    on-shoot: "%p &fThe player &a%victim% &fwas shooted by &a%killer%&f."
+    on-fall: "%p &fThe player &a%victim% &fbroke his legs."
+    on-lava: "%p &fThe player &a%victim% &fwas dying when he was walking/swimming in lava."
+    on-burn: "%p &fThe player &a%victim% &fdied burned."
+    on-poison: "%p &fThe player &a%victim% &fdied of poison."
+    on-drown: "%p &fThe player &a%victim% &fdied on drowning."
+    other: "%p &fThe player &a%victim% died."
+
+arena:
+  created: "%p &fArena &a%arena% &fcreated."
+  lobby-created: "%p &fLobby created! &a%location%&f."
+  deleted: "%p &fArena &a%arena% &fdeleted."
+  chat-format: "&8[Arena] &8| &f%player% &8> &f%message%"
+
+player:
+  join: "%e &fYou joined to &a%arena%"
+  quit: "%e &fYou left to &a%arena%"
+  not-playing: "%e &fYou are not playing any games."
+  already-playing: "%e &fYou are already playing. You are playing in &a%arena%"

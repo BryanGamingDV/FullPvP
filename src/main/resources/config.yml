@@ -1,0 +1,58 @@
+config:
+
+  prefix: "&5[Gli&dtch] &f"
+  p-variable: "%p"
+
+  error: "&4[Err&cor] &f"
+  e-variable: "%e"
+
+
+arena:
+  # To force join to arena, put "none" to disable it.
+  force-join: none
+  # Economy of the server:
+  # Plugin (The economy are saved in the plugin)
+  # Vault (The economy are saved in Vault)
+  economy: plugin
+  # When you enter for first time to a arena, you will have coins, obviously.
+  default-coins: 500
+  # The time to gain a reward in a koth.
+  koth-time: 5m
+  # The coins that the recieve the attacker when kill a player or the coins that victim receive when he dead.
+  coins:
+    assist: 2
+    attacker: 10
+    victim: -5
+    # Killstreak
+    killstreak:
+      2: 5
+      5: 20
+
+signs:
+  shop: "&e[Shop]"
+  buy: "&c[Buy]"
+  sell: "&e[Sell]"
+  join: "&a[Join]"
+  quit: "&c[Quit]"
+
+rankup:
+  mode: kills
+  ranks:
+    newbie: 10
+    apprendice: 20
+    advanced: 30
+    master: 40
+
+
+scoreboard:
+  title: "&a&lKITPVP"
+  lines:
+    - ""
+    - "&fYou: &a%playername%"
+    - "&fArena: &a%arena%"
+    - ""
+    - "&fKills: &a%kills%"
+    - "&fDeaths: &a%deaths%"
+    - "&fCoins: &a%coins%"
+    - ""
+    - "&amc.servername.net"
